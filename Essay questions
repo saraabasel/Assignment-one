@@ -1,0 +1,93 @@
+1-What is a class?
+
+ A class is like a struct (allows bundling of related variables),  but variables and functions in the class can have different properties than in a struct.
+
+2-How does a class accomplish abstraction , encapsulation and data hiding?
+
+A class design attempts to separate the public interface from the specifics of the implementation.
+The public interface represents the abstraction component of the design. Gathering
+the implementation details together and separating them from the abstraction is
+called encapsulation. Data hiding (putting data into the private section of a class) 
+
+
+
+3- What is the relationship between an object and a class?
+
+The object an instance of a class which we use it in the main 
+
+For example : 
+
+class rectangle { 
+
+private:
+
+ int           width ;
+int       length;
+
+public:
+
+void setwidth (int x ) 
+{      width = x ;  }
+
+void setlength (int y )
+{ length = y ; } 
+} 
+int main () {
+
+rectangle   a;     --> An object called a from a class called rectangle 
+
+
+4-In what way,aside from being functions,are class function members different from class data members?
+
+    
+class data members descripe the attributes
+class function member descripe the behaviour
+
+
+
+5. Define a class to represent a bank account. Data members should include the depositor’s name, the account number (use a string),and the balance. Member functions should allow the following:  Creating an object and initializing it.  Displaying the depositor’s name,account number,and balance , Depositing an amount of money given by an argument ,  Withdrawing an amount of money given by an argument Just show the class declaration, not the method implementations.
+
+Class Bankaccount { 
+
+private:
+
+string  depositorname;
+string  accountnumber;
+int         balance; 
+
+public:
+ Bankaccount () ;
+ string  getname ();
+ string  getnumber (); 
+ int        getbalance ();
+void     deposit ( int x);
+void     withdraw ( int y) ;
+};
+
+
+
+
+
+6- When are class constructors called? When are class destructors called?
+
+We called constructors when we need to intialize the values but 
+destructors are used  when the object finished it's work in the main function to clear the data that related to it from the memory
+
+
+
+7. Provide code for a constructor for the bank account class from Chapter Review Question 5
+
+
+Bankaccount() ;
+Or 
+Bankaccount ( string name , int number , int bal) {
+depositername=name;
+accountnumber=number;
+balance=bal; 
+}
+
+8-What is a default constructor? What is the advantage of having one?
+
+A default constructor is a constructor which can be called with no arguments
+Advantage : we donot need to call the constructor in the main function
+
